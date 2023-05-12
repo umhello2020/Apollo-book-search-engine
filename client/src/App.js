@@ -42,16 +42,18 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        <>
+        <div className="flex-column justify-flex-start min-100-vh">
           <Navbar />
-          <Switch>
-            <Route path="/signup" element={<Signup />} /> 
-            <Route path="/login" element={<Login />} /> 
-            <Route path="/" element={<SearchBooks />} />
-            <Route path="/saved" element={<SavedBooks />} />
-            <Route path="*" element={<h1 className="display-2">Wrong page!</h1>} />
-          </Switch>
-        </>
+          <div className="container">
+            <Switch>
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/" element={<SearchBooks />} />
+              <Route path="/saved" element={<SavedBooks />} />
+              <Route path="*" element={<h1 className="display-2">Wrong page!</h1>} />
+            </Switch>
+          </div>
+        </div>
       </Router>
     </ApolloProvider>
   );
