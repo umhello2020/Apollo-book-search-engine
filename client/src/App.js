@@ -8,8 +8,8 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Signup from './components/SignupForm';
-import Login from './components/LoginForm';
+import SignupForm from './components/SignupForm';
+import LoginForm from './components/LoginForm';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
@@ -46,8 +46,8 @@ function App() {
           <Navbar />
           <div className="container">
             <Switch>
-              <Route path="/signup" element={<Signup />} />
-              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignupForm />} />
+              <Route path="/login" element={<LoginForm />} />
               <Route path="/" element={<SearchBooks />} />
               <Route path="/saved" element={<SavedBooks />} />
               <Route path="*" element={<h1 className="display-2">Wrong page!</h1>} />
@@ -59,5 +59,5 @@ function App() {
   );
 }
 
-
 export default App;
+
